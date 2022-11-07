@@ -11,16 +11,7 @@ public class Robot extends Actor
     /**
      * Act - do whatever the Robot wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
-    //Create a property to store the number of lives. Set the lives to 3 in the constructor
-    int lives = 3;
-    
-    //Create a property called pizzaEaten to store the number of Pizza eaten. Set pizzaEaten to 0 in the constructor
-    int pizzaEaten = 0;
-    
-    //Create a property in Robot called score to store the number of score
-    int score = 0;
+     */    
     
     public void act()
     {
@@ -37,6 +28,9 @@ public class Robot extends Actor
     private GreenfootImage robotimage1;
     private GreenfootImage robotimage2;
     private GreenfootImage gameOver;
+    private int lives;
+    private int pizzaEaten;
+    private int score;
     
     //Create a constructor method for the Robot class that assigns the two robot and game over images
     public Robot()
@@ -44,6 +38,15 @@ public class Robot extends Actor
         robotimage1 = new GreenfootImage("man01.png");
         robotimage2 = new GreenfootImage("man02.png");
         gameOver    = new GreenfootImage("gameover.png");
+        
+        //Create a property to store the number of lives. Set the lives to 3 in the constructor
+        lives = 3;
+        
+        //Create a property called pizzaEaten to store the number of Pizza eaten. Set pizzaEaten to 0 in the constructor
+        pizzaEaten = 0;
+        
+        //Create a property in Robot called score to store the number of score. Set the score to 0 in the constructor
+        score = 0;
     }
     
     //Create a method called robotMovement
@@ -161,8 +164,7 @@ public class Robot extends Actor
         //if the number of lives is less than 0, then called gameover image and the game ends
         if (lives < 0)
         {
-            GreenfootImage image = new GreenfootImage(gameOver);
-            setImage(image);
+            setImage(gameOver);
             Greenfoot.stop();
         }
     }
