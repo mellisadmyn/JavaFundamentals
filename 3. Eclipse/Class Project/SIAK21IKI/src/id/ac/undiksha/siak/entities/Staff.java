@@ -30,6 +30,7 @@ public class Staff {
 		System.out.println("Gender: "		+
 				(gender ? "Male" : "Female"));
 		System.out.println("Unit: "		+this.unit);
+		System.out.println("\n");
 	}
 	
 	public void setName(String name) {

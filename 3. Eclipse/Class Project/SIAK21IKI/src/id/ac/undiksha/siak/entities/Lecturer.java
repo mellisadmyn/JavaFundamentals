@@ -40,10 +40,10 @@ public class Lecturer {
 		System.out.println("Study Program: "+this.studyProgram);
 		System.out.println("Department: "	+this.department);
 		System.out.println("Faculty: "		+this.faculty);
-		
 		System.out.println("Gender: "		+
 				(gender ? "Male" : "Female"));
 		System.out.println("Position: "		+this.position);
+		System.out.println("\n");
 	}
 	
 	public void setName(String name) {
